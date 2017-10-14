@@ -1,0 +1,3 @@
+1. Assume that for all subprogram
+
+The objects, since they can be called from outside local subprograms, would have to have a lasting place in the heap/stack for as long as the full runtime program is running, because the objects can be called at any time by other nonlocal subprograms. If not, we may delete an object too soon and the nonlocal subprogram will not be able to access it. 
