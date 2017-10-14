@@ -1,3 +1,34 @@
 1. Assume that for all subprogram
 
 The objects, since they can be called from outside local subprograms, would have to have a lasting place in the heap/stack for as long as the full runtime program is running, because the objects can be called at any time by other nonlocal subprograms. If not, we may delete an object too soon and the nonlocal subprogram will not be able to access it. 
+
+2. Object return may or may not be local to the subprogram
+
+The lifetime would have to be as long as the above case, except that some objects that are called in the local subprogram may be able to be registered during compile to be collected after the running of that subprogram. Else, other subprograms may have to call it, requiring them to last for runtime. 
+
+3. Object can reference other objects
+
+Not sure, must read book.
+
+4. Returning subprograms 
+
+Subprograms are defined during compile time and are definite in size, but these subprograms can call objects of unknown size, so there would be little different, I think. 
+
+5. C# is my favorite language because they say you never get over your first relationship (O' Reilly's C#). We shall see what it's like.
+
+II
+
+1. Drawing. 
+
+2. Variable location labeling. 
+
+III 
+
+Step by step
+
+IV 
+
+a. Beta reductions
+b. two different ways
+c. legality of beta reductions
+d. reduce PLUS 1 1
